@@ -1,26 +1,26 @@
 "cd" command with no arguments:
-  -working directory: perl5
+  -working directory: /home/linux/ieng6/cs15lfa23/cs15lfa23ta
   -I got a blank output because I didn't specify which directory I wanted to change to.
   -The output isn't an error because I didn't specify which directory I wanted to change to.
 "ls" command with no arguments:
-  -working directory: perl5
+  -working directory: /home/linux/ieng6/cs15lfa23/cs15lfa23ta
   -I got the output "perl5" because that's the current directory that I'm in.
   -The output isn't an error.
 "cat" command with no arguments:
-  -working directory: perl5
+  -working directory: /home/linux/ieng6/cs15lfa23/cs15lfa23ta
   -I got a blank output because I didn't specify which file(s) I wanted to concatenate.
   -The output isn't an error because I didn't specify which file(s) I wanted to concatenate.
 ----------------------------------------------------------------------------------------------
 "cd" command with a path to a directory as an argument:
-  -working directory: wavelet
+  -working directory: /home/linux/ieng6/cs15lfa23/cs15lfa23ta/wavelet
   -I got no output, but the text before typing my future commands now included "wavelet" in it.
   -The output isn't an error, because upon successfully changing directories, there is no official output (just the directory name showing in the text before typing future commands).
 "ls" command with a path to a directory as an argument:
-  -working directory: wavelet
+  -working directory: /home/linux/ieng6/cs15lfa23/cs15lfa23ta/wavelet
   -I got the output "ls: cannot access wavelet: No such file or directory" because you're not supposed to enter any arguments.
   -The output isn't an error because I incorrectly entered an argument.
 "cat" command with a path to a directory as an argument:
-  -working directory: wavelet
+  -working directory: /home/linux/ieng6/cs15lfa23/cs15lfa23ta/wavelet
   -I got the output "cat: wavelet: No such file or directory" because you're supposed to specify which file(s) you want to have concatenated.
   -The output isn't an error because I didn't specify which file(s) I wanted to have concatenated.
 ----------------------------------------------------------------------------------------------------
