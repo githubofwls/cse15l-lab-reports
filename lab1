@@ -1,38 +1,38 @@
-"cd" command with no arguments:
-  -working directory: /home/linux/ieng6/cs15lfa23/cs15lfa23ta
-  -I got a blank output because I didn't specify which directory I wanted to change to.
-  -The output isn't an error because I didn't specify which directory I wanted to change to.
-"ls" command with no arguments:
-  -working directory: /home/linux/ieng6/cs15lfa23/cs15lfa23ta
-  -I got the output "perl5" because that's the current directory that I'm in.
-  -The output isn't an error.
-"cat" command with no arguments:
-  -working directory: /home/linux/ieng6/cs15lfa23/cs15lfa23ta
-  -I got a blank output because I didn't specify which file(s) I wanted to concatenate.
-  -The output isn't an error because I didn't specify which file(s) I wanted to concatenate.
-----------------------------------------------------------------------------------------------
-"cd" command with a path to a directory as an argument:
+"cd" with no arguments:
+  -working directory: /home
+  -I got no output because I didn't specify which directory I wanted to change into.
+  -The output is an error because I didn't specify which directory I wanted to change into.
+"ls" with no arguments:
+  -working directory: /home
+  -I got the output "wavelet" because that is the folder that I am working with.
+  -The output is not an error because it correctly listed which file(s)/folder I am working with.
+"cat" with no arguments:
+  -working directory: /home
+  -I got no output because I didn't specify which file(s) I wanted to have concatenated.
+  -The output is an error because I didn't specify which file(s) I wanted to have concatenated.
+-----------------------------------------------
+"cd" with a path to a directory as an argument:
   -working directory: /home/linux/ieng6/cs15lfa23/cs15lfa23ta/wavelet
-  -I got no output, but the text before typing my future commands now included "wavelet" in it.
-  -The output isn't an error, because upon successfully changing directories, there is no official output (just the directory name showing in the text before typing future commands).
-"ls" command with a path to a directory as an argument:
+  -I got no output because I don't need any output; I just need to see that the text before my future commands now include the name of the directory I wanted to change into.
+  -The output is not an error because it correctly changed directories.
+"ls" with a path to a directory as an argument:
   -working directory: /home/linux/ieng6/cs15lfa23/cs15lfa23ta/wavelet
-  -I got the output "ls: cannot access wavelet: No such file or directory" because you're not supposed to enter any arguments.
-  -The output isn't an error because I incorrectly entered an argument.
-"cat" command with a path to a directory as an argument:
+  -I got the output "NumberServer.java README.md Server.java" because those are the files that I have access to.
+  -The output is not an error because it correctly listed which file(s) I am working with.
+"cat" with a path to a directory as an argument:
   -working directory: /home/linux/ieng6/cs15lfa23/cs15lfa23ta/wavelet
-  -I got the output "cat: wavelet: No such file or directory" because you're supposed to specify which file(s) you want to have concatenated.
-  -The output isn't an error because I didn't specify which file(s) I wanted to have concatenated.
-----------------------------------------------------------------------------------------------------
-"cd" command with a path to a file as an argument:
+  -I got the output "cat: wavelet: Is a directory" because you can't concatenate a directory.
+  -The output is an error because I incorrectly entered a directory instead of a file(s).
+------------------------------------------
+"cd" with a path to a file as an argument:
   -working directory: /home/linux/ieng6/cs15lfa23/cs15lfa23ta/wavelet
-  -
-  -
-"ls" command with a path to a file as an argument:
+  -I got the output "-bash: cd: NumberServer.java: Not a directory" because I changed directories into a file.
+  -The output is an error because I incorrectly entered a file instead of a directory.
+"ls" with a path to a file as an argument:
   -working directory: /home/linux/ieng6/cs15lfa23/cs15lfa23ta/wavelet
-  -
-  -
-"cat" command with a path to a file as an argument:
+  -I got the output "NumberServer.java" because I entered a specific file.
+  -The output is an error because I specified a file instead of entering no argument.
+"cat" with a path to a file as an argument:
   -working directory: /home/linux/ieng6/cs15lfa23/cs15lfa23ta/wavelet
-  -
-  -
+  -I got the output of the entire code of NumberServer.java because I concatenated that specific file.
+  -The output is not an error because it correctly outputted the contents of the file.
