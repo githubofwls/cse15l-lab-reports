@@ -26,7 +26,8 @@ public class StringServer {
                     String[] params = query.split("=");
                     if (params.length == 2 && params[0].equals("s")) {
                         String newMessage = params[1];
-                        message += (message.isEmpty() ? "" : "\n") + (message.split("\n").length + 1) + ". " + newMessage;
+                        message += (message.isEmpty() ? "" : "\n") + 
+(message.split("\n").length + 1) + ". " + newMessage;
                         exchange.sendResponseHeaders(200, message.length());
                         OutputStream os = exchange.getResponseBody();
                         os.write(message.getBytes());
@@ -44,11 +45,11 @@ public class StringServer {
 
 - Method Called: handle in the AddMessageHandler class
 - Relevant Arguments: the query string in the URL, which is s=How%20are%20you
-- Relevant Field Values: message contains "1. Hello" from the previous request and gets updated to "1. Hello\n2. How are 
-  you" after the request
+- Relevant Field Values: message contains "1. Hello" from the previous request and gets updated to 
+  "1. Hello\n2. How are you" after the request
 
 PART 3:
 
-I learned a lot. From week 2, I learned how to remotely connect via the ssh (secure shell) command and how to run a server 
-both locally and remotely. From week 3, I learned how to setup bash, what the commands scp (secure copy) and mkdir (make 
-directory) do, and how to setup a ssh key.
+I learned a lot. From week 2, I learned how to remotely connect via the ssh (secure shell) command 
+and how to run a server both locally and remotely. From week 3, I learned how to setup bash, what 
+the commands scp (secure copy) and mkdir (make directory) do, and how to setup a ssh key.
