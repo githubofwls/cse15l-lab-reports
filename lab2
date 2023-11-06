@@ -38,6 +38,15 @@ public class StringServer {
     }
 }
 
+- Method Called: handle in the AddMessageHandler class
+- Relevant Arguments: the query string in the URL, which is s=Hello
+- Relevant Field Values: message is initially empty and gets updated to "1. Hello" after the request
+
+- Method Called: handle in the AddMessageHandler class
+- Relevant Arguments: the query string in the URL, which is s=How%20are%20you
+- Relevant Field Values: message contains "1. Hello" from the previous request and gets updated to "1. Hello\n2. How are 
+  you" after the request
+
 PART 3:
 
 I learned a lot. From week 2, I learned how to remotely connect via the ssh (secure shell) command and how to run a server 
