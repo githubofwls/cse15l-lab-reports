@@ -1,0 +1,45 @@
+PART 1:
+
+import java.io.*;
+import java.net.*;
+import java.util.*;
+import com.sun.net.httpserver.*;
+
+public class StringServer {
+    private static String message = "";
+
+    public static void main(String[] args) throws IOException {
+        HttpServer server = HttpServer.create(new InetSocketAddress(8080), 0);
+        server.createContext("/add-message", new AddMessageHandler());
+        server.setExecutor(null);
+        server.start();
+    }
+
+    static class AddMessageHandler implements HttpHandler {
+        @Override
+        public void handle(HttpExchange exchange) throws IOException {
+            String requestMethod = exchange.getRequestMethod();
+
+            if (requestMethod.equalsIgnoreCase("GET")) {
+                String query = exchange.getRequestURI().getQuery();
+                if (query != null) {
+                    String[] params = query.split("=");
+                    if (params.length == 2 && params[0].equals("s")) {
+                        String newMessage = params[1];
+                        message += (message.isEmpty() ? "" : "\n") + (message.split("\n").length + 1) + ". " + newMessage;
+                        exchange.sendResponseHeaders(200, message.length());
+                        OutputStream os = exchange.getResponseBody();
+                        os.write(message.getBytes());
+                        os.close();
+                    }
+                }
+            }
+        }
+    }
+}
+
+PART 3:
+
+I learned a lot. From week 2, I learned how to remotely connect via the ssh (secure shell) command and how to run a server 
+both locally and remotely. From week 3, I learned how to setup bash, what the commands scp (secure copy) and mkdir (make 
+directory) do, and how to setup a ssh key.
