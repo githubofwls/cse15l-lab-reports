@@ -32,6 +32,13 @@ static void reverseInPlace(int[] arr) {
     }
 }*
 
+
+
+
+
+
+
+
 The bug fix involves correcting the logic within the reverseInPlace method. Instead of 
 assigning arr[i] to arr[arr.length-1-1] (which was causing all elements to be set to the 
 second-to-last element), it now correctly swaps elements from the beginning and end of 
